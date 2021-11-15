@@ -1,9 +1,9 @@
 import express from 'express';
 import newsPaperFiltering from './functions/newsPaper.js';
 import newspapersLoop from './functions/newsPapers.js';
+
 const PORT = process.env.PORT || 8000;
 const app = express();
-
 
 app.get('/', (req, res) => {
     res.json('Welcome to my Climate Change API!')
@@ -18,7 +18,6 @@ app.get('/news', (req, res) => {
 //  GET REQUEST -> One Article
 app.get('/news/:newspaperId', (req, res) => {
     const newspaperId = req.params.newspaperId;
-    console.log(newspaperId);
     let data = newsPaperFiltering(newspaperId);
     res.json(data);
 

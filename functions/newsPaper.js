@@ -23,14 +23,14 @@ const newsPaperFiltering = (newspaperId) => {
                     source: newspaperId
                 })
             })
-        }).catch(err => console.log(err));
 
-    if (specificArticles.length === 0){
-        return 'Sorry, no articles available at this time.'
-    }
-    else{
-        return specificArticles
-    }
+            if (specificArticles.length === 0){
+                return 'Sorry, no articles available at this time.'
+            }
+            else{
+                return specificArticles
+            }
+        }).catch(err => console.log(err));
 }
 
 export default newsPaperFiltering

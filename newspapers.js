@@ -64,4 +64,4 @@ export const newspapers = [
         address: 'https://nypost.com/tag/climate-change/',
         base: ''
     }
-]
+];
