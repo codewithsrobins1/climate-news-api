@@ -1,7 +1,7 @@
 import express from 'express';
 import newsPaperFiltering from './functions/newsPaper.js';
 import newspapersLoop from './functions/newsPapers.js';
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const app = express();
 
 
