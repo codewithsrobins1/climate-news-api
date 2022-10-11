@@ -9,7 +9,9 @@ const newspapersLoop = () => {
     newspapers.forEach((newsPaper) => {
         axios.get(newsPaper.address)
         .then((response) => {
+            
             const html = response.data;
+            console.log('I AM HTML', html);
 
             //Use Cheerio to Grab Markup
             const $ = cheerio.load(html);
